@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@svgr/webpack": "^5.0.1",
+    "@svgr/webpack": "^5.2.0",
     "bulma": "^0.8.0",
     "gatsby": "^2.18.12",
     "gatsby-alias-imports": "^1.0.4",
