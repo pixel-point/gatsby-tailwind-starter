@@ -1,2 +1,69 @@
-@import "bulma/sass/utilities/_all.sass";
-@import "bulma/sass/utilities/mixins.sass";
+@import 'bulma/sass/utilities/_all.sass';
+@import 'bulma/sass/utilities/mixins.sass';
+
+@mixin lg-down {
+  // 1219.98 - 1024
+  @media only screen and (max-width: $breakpoint-lg-down) {
+    @content;
+  }
+}
+
+@mixin md-down {
+  // 1023.98 - 768
+  @media only screen and (max-width: $breakpoint-md-down) {
+    @content;
+  }
+}
+
+@mixin sm-down {
+  // 767.98 - 576
+  @media only screen and (max-width: $breakpoint-sm-down) {
+    @content;
+  }
+}
+
+@mixin xs-down {
+  // 575.98 - 414
+  @media only screen and (max-width: $breakpoint-xs-down) {
+    @content;
+  }
+}
+
+@mixin xxs-down {
+  // 413.98px - 320
+  @media only screen and (max-width: $breakpoint-xxs-down) {
+    @content;
+  }
+}
+
+@mixin section-padding {
+  // constant() is for older versions of Safari, env() all other cases
+  padding-right: constant(safe-area-inset-right);
+  padding-right: env(safe-area-inset-right);
+  padding-left: constant(safe-area-inset-left);
+  padding-left: env(safe-area-inset-left);
+
+  @include md-down {
+    padding-right: calc(constant(safe-area-inset-right) + 34px);
+    padding-right: calc(env(safe-area-inset-right) + 34px);
+    padding-left: calc(constant(safe-area-inset-left) + 34px);
+    padding-left: calc(env(safe-area-inset-left) + 34px);
+  }
+
+  @include sm-down {
+    padding-right: calc(constant(safe-area-inset-right) + 15px);
+    padding-right: calc(env(safe-area-inset-right) + 15px);
+    padding-left: calc(constant(safe-area-inset-left) + 15px);
+    padding-left: calc(env(safe-area-inset-left) + 15px);
+  }
+}
+
+@mixin convert-br-into-space {
+  br {
+    content: '';
+
+    &:after {
+      content: ' ';
+    }
+  }
+}

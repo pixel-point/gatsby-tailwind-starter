@@ -1,12 +1,10 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
-import { createMetaImagePath } from 'utils';
+import createMetaImagePath from 'utils/create-meta-image-path';
 
-export const SEO = ({
-  data: { title, description, image, slug } = {},
-  facebook,
-} = {}) => {
+const SEO = ({ data: { title, description, image, slug } = {}, facebook } = {}) => {
   const {
     site: {
       siteMetadata: {
@@ -32,10 +30,12 @@ export const SEO = ({
       }
     }
   `);
+
   const currentTitle = title || siteTitle;
   const currentDescription = description || siteDescription;
   const currentUrl = slug ? `${siteUrl}/${slug}` : siteUrl;
-  const currentImage = createMetaImagePath(image, siteUrl, siteImage);
+  const currentImage = image || siteImage;
+  const currentImagePath = createMetaImagePath(currentImage, siteUrl);
 
   return (
     <Helmet
@@ -46,17 +46,19 @@ export const SEO = ({
       }}
     >
       {/* General */}
-      <meta name={'description'} content={currentDescription}/>
+      <meta name="description" content={currentDescription} />
       {/* Open Graph */}
-      <meta property={'og:url'} content={currentUrl}/>
-      <meta property={'og:title'} content={currentTitle}/>
-      <meta property={'og:description'} content={currentDescription}/>
-      <meta property={'og:image'} content={currentImage}/>
-      <meta property={'og:type'} content={'website'}/>
-      {facebook && <meta property={'fb:app_id'} content={facebook.appId}/>}
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:title" content={currentTitle} />
+      <meta property="og:description" content={currentDescription} />
+      <meta property="og:image" content={currentImagePath} />
+      <meta property="og:type" content="website" />
+      {facebook && <meta property="fb:app_id" content={facebook.appId} />}
       {/* Twitter Card tags */}
-      <meta name={'twitter:card'} content={'summary'}/>
-      <meta name={'twitter:creator'} content={authorTwitterAccount}/>
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:creator" content={authorTwitterAccount} />
     </Helmet>
   );
 };
+
+export default SEO;

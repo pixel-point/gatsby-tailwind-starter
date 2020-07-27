@@ -1,19 +1,16 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Header from 'components/shared/header';
-import styles from './layout-main.module.scss';
 
-
-const LayoutMain = ({ children }) => (
+const MainLayout = ({ children }) => (
   <>
     <Header />
     <main>{children}</main>
   </>
 );
 
-LayoutMain.propTypes = {
+MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default LayoutMain;
+export default MainLayout;

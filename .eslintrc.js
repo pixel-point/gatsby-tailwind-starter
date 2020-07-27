@@ -4,7 +4,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'prettier'],
+  extends: ['plugin:react/recommended', 'airbnb', 'prettier', 'prettier/react'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -13,7 +13,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
     sourceType: 'module',
   },
   plugins: ['react'],
@@ -22,6 +22,31 @@ module.exports = {
       2,
       {
         extensions: ['.js'],
+      },
+    ],
+    'react/no-array-index-key': 0,
+    'react/jsx-props-no-spreading': 0,
+    'react/no-danger': 0,
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: ['gatsby-config.js', 'gatsby-node.js', 'gatsby-ssr.js'],
+      },
+    ],
+    'jsx-a11y/label-has-associated-control': [
+      'error',
+      {
+        required: {
+          some: ['nesting', 'id'],
+        },
+      },
+    ],
+    'jsx-a11y/label-has-for': [
+      'error',
+      {
+        required: {
+          some: ['nesting', 'id'],
+        },
       },
     ],
   },
