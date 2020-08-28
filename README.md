@@ -1,97 +1,174 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Pixel Point Gatsby Starter
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+## Table of Contents
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+  - [Run website](#run-the-website)
+  - [Build website](#build-the-website)
+  - [Run built website](#run-built-website)
+  - [Clean Gatsby cache](#clean-gatsby-cache)
+- [Project Structure](#project-structure)
+- [Code Style](#code-style)
+  - [ESLint](#eslint)
+  - [Prettier](#prettier)
+  - [VS Code](#vs-code)
+- [Style Variables](#style-variables)
 
-## 🚀 Quick start
+## Getting Started
 
-1.  **Create a Gatsby site.**
+1. Clone this repository
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+```bash
+git clone git@github.com:pixel-point/gatsby-starter.git
+```
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+2. Install dependencies
 
-1.  **Start developing.**
+```bash
+npm install
+```
 
-    Navigate into your new site’s directory and start it up.
+3. Copy .env.example and rename it into .env
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+## Usage
 
-1.  **Open the source code and start editing!**
+### Run the website
 
-    Your site is now running at `http://localhost:8000`!
+```bash
+npm run start
+```
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+### Build the website
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+```bash
+npm run build
+```
 
-## 🧐 What's inside?
+### Run the built website
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+```bash
+npm run serve
+```
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+### Clean Gatsby cache
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+```bash
+npm run clean
+```
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+## Project Structure
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+```text
+├── src
+│   ├── components
+│   │  ├── pages — React components that are being used specifically on a certain page
+│   │  └── shared — React components that are being used across the whole website
+│   ├── hooks
+│   ├── images — Images that are being quired using graphql. Read more about it here — gatsbyjs.org/docs/working-with-images. Also note, that folder structure should be equal to the structure of components folder
+│   ├── layouts
+│   ├── pages
+│   ├── styles
+│   ├── templates
+│   ├── utils
+│   └── html.js — HTML template for all generated pages. Read more about it here — gatsbyjs.org/docs/custom-html
+├── static
+│   └── fonts - Self-hosted fonts
+├── gatsby-browser.js — This file is where Gatsby expects to find any usage of the Gatsby browser APIs (if any). These allow customization/extension of default Gatsby settings affecting the browser. Read more about it here — gatsbyjs.org/docs/browser-apis
+├── gatsby-config.js — This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. Read more about it here — gatsbyjs.org/docs/gatsby-config
+├── gatsby-node.js — This file is where Gatsby expects to find any usage of the Gatsby Node APIs (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process. Read more about it here — gatsbyjs.org/docs/node-apis
+└── gatsby-ssr.js — This file is where Gatsby expects to find any usage of the Gatsby server-side rendering APIs (if any). These allow customization of default Gatsby settings affecting server-side rendering. Read more about it here — gatsbyjs.org/docs/ssr-apis
+```
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+## Component Folder Structure
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+### Each component includes
 
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
+1. Main JavaScript File
+2. SASS File
+3. Index File
 
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+### Each component optionally may include
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+1. Folder with images
+2. Folder with icons
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+Also, each component may include another component that follows all above listed rules.
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+### Example structure
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+```bash
+component
+├── nested-component
+│  ├── images
+│  │  └── image.png
+│  ├── icons
+│  │  └── icon.svg
+│  ├── nested-component.js
+│  ├── nested-component.module.scss
+│  └── index.js
+├── images
+│  └── image.png
+├── icons
+│  └── icon.svg
+├── component.js
+├── component.module.scss
+└── index.js
+```
 
-12. **`README.md`**: A text file containing useful reference information about your project.
+## Code Style
 
-## 🎓 Learning Gatsby
+### ESLint
 
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
+[ESLint](https://eslint.org/) helps find and fix code style issues and force developers to follow same rules. Current configuration is based on [Airbnb style guide](https://github.com/airbnb/javascript).
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+Additional commands:
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+```bash
+npm run lint
+```
 
-## 💫 Deploy
+Run it to check the current status of eslint issues across project.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+```bash
+npm run lint:fix
+```
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+Run it to fix all possible issues.
+
+### Prettier
+
+[Prettier](https://prettier.io/) helps to format code based on defined rules. [Difference between Prettier and ESLint](https://prettier.io/docs/en/comparison.html).
+
+Additional commands:
+
+```bash
+npm run format
+```
+
+Run it to format all files across the project.
+
+### VS Code
+
+Following extensions required to simplify the process of keeping the same code style across the project:
+
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+After installation enable "ESLint on save" by adding to your VS Code settings.json the following line:
+
+```json
+"editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+}
+```
+
+You can navigate to settings.json by using Command Pallete (CMD+Shift+P) and then type "Open settings.json".
+
+To enable Prettier go to Preferences -> Settings -> type "Format". Then check that you have esbenp.prettier-vscode as default formatter, and also enable "Format On Save".
+
+Reload VS Code and auto-format will work for you.
+
+## Style Variables
+
+All style variables that being used across the whole application are stored in [src/styles/variables.scss](/src/styles/variables.scss).
