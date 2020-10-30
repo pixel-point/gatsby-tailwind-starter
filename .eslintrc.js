@@ -2,9 +2,8 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    node: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'prettier', 'prettier/react'],
+  extends: ['airbnb', 'airbnb/hooks', 'airbnb/whitespace', 'prettier', 'prettier/react'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -18,19 +17,40 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    'react/jsx-filename-extension': [
-      2,
+    'no-shadow': 'off',
+    'react/no-array-index-key': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/no-danger': 'off',
+    'react/jsx-sort-props': [
+      'error',
       {
-        extensions: ['.js'],
+        callbacksLast: true,
+        shorthandLast: true,
+        noSortAlphabetically: true,
       },
     ],
-    'react/no-array-index-key': 0,
-    'react/jsx-props-no-spreading': 0,
-    'react/no-danger': 0,
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object'],
+        'newlines-between': 'always',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['gatsby-config.js', 'gatsby-node.js', 'gatsby-ssr.js'],
+        devDependencies: [
+          '.storybook/**',
+          'src/components/**/*.stories.js',
+          'src/components/**/*.stories.jsx',
+          'gatsby-config.js',
+          'gatsby-node.js',
+          'gatsby-ssr.js',
+        ],
       },
     ],
     'jsx-a11y/label-has-associated-control': [

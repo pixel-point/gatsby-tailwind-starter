@@ -1,9 +1,9 @@
 import React from 'react';
-import MainLayout from 'layouts/main';
-import Link from 'components/shared/link';
 
+import Link from 'components/shared/link';
 import ExampleInlineSVG from 'images/example.inline.svg';
 import exampleUrlSvg from 'images/example.svg';
+import MainLayout from 'layouts/main';
 
 const IndexPage = () => (
   <MainLayout>

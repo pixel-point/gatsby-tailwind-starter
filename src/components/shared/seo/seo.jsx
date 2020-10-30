@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
+import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { useStaticQuery, graphql } from 'gatsby';
+
 import createMetaImagePath from 'utils/create-meta-image-path';
 
 const SEO = ({ data: { title, description, image, slug } = {}, facebook } = {}) => {

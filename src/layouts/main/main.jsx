@@ -1,5 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import Header from 'components/shared/header';
 
 const MainLayout = ({ children }) => (

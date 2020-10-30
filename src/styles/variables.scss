@@ -35,20 +35,11 @@ $line-height-sm: '';
 $font-size-xs: '';
 $line-height-xs: '';
 
-// Bulma variables overwriting, more info https://bulma.io/documentation/customize/variables/
-$gap: 20px;
-$tablet: 768px;
-$desktop: 1024px;
-$widescreen: 1180px + (2 * $gap);
-$fullhd-enabled: false;
-
-// Breakpoints
-// We minus 0.02px from our breakpoints because these breakpoints are for mobile-first but we use desktop-first approach
-$breakpoint-lg-down: $widescreen - 0.02px;
-$breakpoint-md-down: $desktop - 0.02px;
-$breakpoint-sm-down: $tablet - 0.02px;
-$breakpoint-xs-down: 576px - 0.02px;
-$breakpoint-xxs-down: 414px - 0.02px;
-
 // Animate
 $transition-base: 0.2s;
+
+// Breakpoints
+$breakpoint-lg-down: 1330px - 0.02px;
+$breakpoint-md-down: 1024px - 0.02px;
+$breakpoint-sm-down: 768px - 0.02px;
+$breakpoint-xs-down: 414px - 0.02px;

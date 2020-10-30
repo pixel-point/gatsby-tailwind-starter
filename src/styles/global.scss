@@ -12,13 +12,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-.container {
-  @include lg-down {
-    max-width: 940px;
-  }
-
-  @include md-down {
-    max-width: initial;
-  }
-}
