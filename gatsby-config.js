@@ -73,9 +73,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        data: '@import "./src/styles/variables.scss" , "./src/styles/mixins.scss";',
-        cssLoaderOptions: {
-          camelCase: true,
+        additionalData: '@import "./src/styles/variables.scss" , "./src/styles/mixins.scss";',
+        sassOptions: {
+          cssLoaderOptions: {
+            camelCase: true,
+          },
         },
       },
     },
