@@ -75,7 +75,10 @@ module.exports = {
       options: {
         additionalData: '@import "./src/styles/variables.scss" , "./src/styles/mixins.scss";',
         cssLoaderOptions: {
-          camelCase: true,
+          modules: {
+            namedExport: false,
+            exportLocalsConvention: 'camelCase',
+          },
         },
       },
     },
