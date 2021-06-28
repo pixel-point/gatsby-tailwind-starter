@@ -1,19 +1,32 @@
-
 {
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-recommended-scss",
     "stylelint-config-css-modules",
-    "stylelint-config-recess-order"
+    "stylelint-config-recess-order",
+    "stylelint-config-recommended"
   ],
   "rules": {
     "no-descending-specificity": null,
-    "at-rule-no-unknown": null,
+    "at-rule-no-unknown": [ 
+        true, {
+        "ignoreAtRules": [
+          "extends",
+          "tailwind",
+          "layer",
+        ]
+      }
+    ],
+    "block-no-empty": null,
+    "unit-whitelist": ["em", "rem", "s"],
     "scss/at-rule-no-unknown": [
       true,
       {
         "ignoreAtRules": [
-          "value"
+          "value",
+          "extends",
+          "tailwind",
+          "layer",
         ]
       }
     ]
