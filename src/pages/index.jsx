@@ -1,3 +1,4 @@
+import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 import Link from 'components/shared/link';
@@ -8,6 +9,7 @@ import MainLayout from 'layouts/main';
 const IndexPage = () => (
   <MainLayout>
     <div className="container">
+      <StaticImage alt="Example static image" src="../images/gatsby-astronaut.png" />
       <div className="columns">
         <div className="column">1</div>
         <div className="column">2</div>
