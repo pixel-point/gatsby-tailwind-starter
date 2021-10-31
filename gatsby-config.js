@@ -9,7 +9,7 @@ module.exports = {
     // pathPrefix: "",
     siteImage: '/images/sample-image.png',
     siteLanguage: 'en',
-    siteUrl: process.env.GATSBY_DEFAULT_SITE_URL,
+    siteUrl: process.env.GATSBY_DEFAULT_SITE_URL || 'http://localhost:8000',
     /* author */
     authorName: 'pixel point',
     authorTwitterAccount: '@',
