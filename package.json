@@ -11,12 +11,10 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write .",
-    "lint": "npm run lint:js & npm run lint:styles & npm run lint:md",
-    "lint:fix": "npm run lint:js:fix & npm run lint:styles:fix & npm run lint:md:fix",
+    "lint": "npm run lint:js & npm run lint:md",
+    "lint:fix": "npm run lint:js:fix & npm run lint:md:fix",
     "lint:js": "eslint --ext .js,.jsx --ignore-path .gitignore .",
     "lint:js:fix": "eslint --fix --ext .js,.jsx --ignore-path .gitignore .",
-    "lint:styles": "stylelint --ignore-path .gitignore '{**/*,*}.{css,sass,scss,md,html}'",
-    "lint:styles:fix": "stylelint --fix --ignore-path .gitignore '{**/*,*}.{css,sass,scss,md,html}'",
     "lint:md": "markdownlint --ignore-path .gitignore .",
     "lint:md:fix": "markdownlint --fix --ignore-path .gitignore .",
     "prepare": "husky install"
@@ -58,13 +56,7 @@
     "markdownlint-cli": "^0.29.0",
     "postcss": "^8.3.11",
     "postcss-import": "^14.0.2",
-    "prettier": "^2.4.1",
-    "stylelint": "^14.0.1",
-    "stylelint-config-css-modules": "^2.3.0",
-    "stylelint-config-recess-order": "^2.5.0",
-    "stylelint-config-standard": "^23.0.0",
-    "stylelint-order": "^5.0.0",
-    "stylelint-scss": "^4.0.0"
+    "prettier": "^2.4.1"
   },
   "keywords": [
     "gatsby"
