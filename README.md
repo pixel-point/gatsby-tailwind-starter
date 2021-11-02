@@ -13,7 +13,6 @@
   - [ESLint](#eslint)
   - [Prettier](#prettier)
   - [VS Code](#vs-code)
-- [Style Variables](#style-variables)
 
 ## Getting Started
 
@@ -66,12 +65,11 @@ npm run clean
 │   │  └── shared — React components that are being used across the whole website
 │   ├── hooks
 │   ├── images — Images that are being quired using graphql. Read more about it here — gatsbyjs.org/docs/working-with-images. Also note, that folder structure should be equal to the structure of components folder
-│   ├── layouts
 │   ├── pages
 │   ├── styles
 │   ├── templates
 │   ├── utils
-│   └── html.js — HTML template for all generated pages. Read more about it here — gatsbyjs.org/docs/custom-html
+│   └── html.jsx — HTML template for all generated pages. Read more about it here — gatsbyjs.org/docs/custom-html
 ├── static
 │   └── fonts - Self-hosted fonts
 ├── gatsby-browser.js — This file is where Gatsby expects to find any usage of the Gatsby browser APIs (if any). These allow customization/extension of default Gatsby settings affecting the browser. Read more about it here — gatsbyjs.org/docs/browser-apis
@@ -85,13 +83,11 @@ npm run clean
 ### Each component includes
 
 1. Main JavaScript File
-2. SASS File
-3. Index File
+2. Index File
 
 ### Each component optionally may include
 
-1. Folder with images
-2. Folder with icons
+1. Folder with icons and images
 
 Also, each component may include another component that follows all above listed rules.
 
@@ -101,18 +97,14 @@ Also, each component may include another component that follows all above listed
 component
 ├── nested-component
 │  ├── images
-│  │  └── image.png
-│  ├── icons
+│  │  ├── image.png
 │  │  └── icon.svg
 │  ├── nested-component.js
-│  ├── nested-component.module.scss
 │  └── index.js
 ├── images
-│  └── image.png
-├── icons
+│  ├── image.png
 │  └── icon.svg
 ├── component.js
-├── component.module.scss
 └── index.js
 ```
 
@@ -168,7 +160,3 @@ You can navigate to settings.json by using Command Pallete (CMD+Shift+P) and the
 To enable Prettier go to Preferences -> Settings -> type "Format". Then check that you have esbenp.prettier-vscode as default formatter, and also enable "Format On Save".
 
 Reload VS Code and auto-format will work for you.
-
-## Style Variables
-
-All style variables that being used across the whole application are stored in [src/styles/variables.scss](/src/styles/variables.scss).
