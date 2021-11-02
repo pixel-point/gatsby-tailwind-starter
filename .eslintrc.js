@@ -17,7 +17,9 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
+    'no-unused-vars': 'error',
     'no-shadow': 'off',
+    'react/prop-types': 'error',
     'react/no-array-index-key': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/no-danger': 'off',
