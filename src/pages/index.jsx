@@ -1,25 +1,7 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
-import Link from 'components/shared/link';
-import ExampleInlineSVG from 'images/example.inline.svg';
-import exampleUrlSvg from 'images/example.svg';
-import MainLayout from 'layouts/main';
+import Layout from 'components/shared/layout';
 
-const IndexPage = () => (
-  <MainLayout>
-    <div className="container">
-      <StaticImage alt="Example static image" src="../images/gatsby-astronaut.png" />
-      <div className="columns">
-        <div className="column">1</div>
-        <div className="column">2</div>
-        <div className="column">3</div>
-      </div>
-      Inline SVG: <ExampleInlineSVG />
-      URL SVG: <img src={exampleUrlSvg} alt="" />
-      <Link to="/page-2">Page 2</Link>
-    </div>
-  </MainLayout>
-);
+const HomePage = () => <Layout>Hello world!</Layout>;
 
-export default IndexPage;
+export default HomePage;

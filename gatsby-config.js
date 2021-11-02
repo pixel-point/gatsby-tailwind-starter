@@ -3,16 +3,14 @@
 require('dotenv').config();
 
 module.exports = {
+  flags: { DEV_SSR: process.env.GATSBY_DEV_SSR || false },
   siteMetadata: {
-    siteTitle: 'Pixel Point Gatsby Starter', // <title>
+    siteTitle: 'Pixel Point Gatsby Starter',
     siteDescription: 'Site Description',
-    // pathPrefix: "",
-    siteImage: '/images/sample-image.png',
+    siteImage: '/images/social-preview.jpg',
     siteLanguage: 'en',
-    siteUrl: process.env.GATSBY_DEFAULT_SITE_URL || 'http://localhost:8000',
-    /* author */
-    authorName: 'pixel point',
-    authorTwitterAccount: '@',
+    siteUrl: process.env.GATSBY_DEFAULT_SITE_URL,
+    authorName: 'Pixel Point',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -28,7 +26,10 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sharp',
       options: {
-        defaultQuality: 85,
+        defaults: {
+          quality: 85,
+          placeholder: 'none',
+        },
       },
     },
     {
@@ -40,7 +41,7 @@ module.exports = {
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.png',
       },
     },
     {
@@ -74,9 +75,6 @@ module.exports = {
     },
     'gatsby-alias-imports',
     'gatsby-plugin-postcss',
-    `gatsby-plugin-sitemap`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    'gatsby-plugin-sitemap',
   ],
 };
