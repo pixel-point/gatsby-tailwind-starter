@@ -68,7 +68,7 @@ npm run clean
 │   │  ├── pages — React components that are being used specifically on a certain page
 │   │  └── shared — React components that are being used across the whole website
 │   ├── hooks
-│   ├── images — Images that are being quired using graphql. Read more about it here — gatsbyjs.org/docs/working-with-images. Also note, that folder structure should be equal to the structure of components folder
+│   ├── images
 │   ├── pages
 │   ├── styles
 │   ├── templates
@@ -76,10 +76,10 @@ npm run clean
 │   └── html.jsx — HTML template for all generated pages. Read more about it here — gatsbyjs.org/docs/custom-html
 ├── static
 │   └── fonts
-├── gatsby-browser.js — This file is where Gatsby expects to find any usage of the Gatsby browser APIs (if any). These allow customization/extension of default Gatsby settings affecting the browser. Read more about it here — gatsbyjs.org/docs/browser-apis
-├── gatsby-config.js — This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. Read more about it here — gatsbyjs.org/docs/gatsby-config
-├── gatsby-node.js — This file is where Gatsby expects to find any usage of the Gatsby Node APIs (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process. Read more about it here — gatsbyjs.org/docs/node-apis
-└── gatsby-ssr.js — This file is where Gatsby expects to find any usage of the Gatsby server-side rendering APIs (if any). These allow customization of default Gatsby settings affecting server-side rendering. Read more about it here — gatsbyjs.org/docs/ssr-apis
+├── gatsby-browser.js — Usage of the Gatsby browser APIs. Read more about it [here](gatsbyjs.org/docs/browser-apis)
+├── gatsby-config.js — Main configuration file for a Gatsby site. Read more about it [here](gatsbyjs.org/docs/gatsby-config)
+├── gatsby-node.js — Usage of the Gatsby Node APIs. [Read more about it here](gatsbyjs.org/docs/node-apis)
+└── gatsby-ssr.js — Usage of the Gatsby server-side rendering APIs. [Read more about it here](gatsbyjs.org/docs/ssr-apis)
 ```
 
 ## Component Folder Structure
@@ -91,7 +91,8 @@ npm run clean
 
 ### Each component optionally may include
 
-1. Folder with icons and images
+1. Folder with images and icons
+2. Folder with data
 
 Also, each component may include another component that follows all above listed rules.
 
@@ -100,14 +101,18 @@ Also, each component may include another component that follows all above listed
 ```bash
 component
 ├── nested-component
+│  ├── data
+│  │  └── nested-component-lottie-data.json
 │  ├── images
-│  │  ├── image.png
-│  │  └── icon.svg
+│  │  ├── nested-component-image.jpg
+│  │  └── nested-component-icon.svg
 │  ├── nested-component.js
 │  └── index.js
+├── data
+│  └── component-lottie-data.json
 ├── images
-│  ├── image.png
-│  └── icon.svg
+│  ├── component-image.jpg
+│  └── component-icon.svg
 ├── component.js
 └── index.js
 ```
