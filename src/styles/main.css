@@ -1,5 +1,10 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import './fonts';
+
+/* @import './fonts';
 @import './global';
+@import './container';
+@import './safe-paddings';
+@import './font-sizes';
+@import './grid-gap'; */

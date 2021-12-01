@@ -1,6 +1,7 @@
 @tailwind base;
 
 @layer base {
+  /* TODO: add global styles */
   body {
     @apply antialiased;
   }
