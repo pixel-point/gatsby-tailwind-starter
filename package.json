@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "clsx": "^1.1.1",
+    "framer-motion": "^5.3.3",
     "gatsby": "^4.2.0",
     "gatsby-plugin-image": "^2.2.0",
     "prop-types": "^15.7.2",
