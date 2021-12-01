@@ -5,7 +5,7 @@ require('dotenv').config();
 module.exports = {
   flags: { DEV_SSR: process.env.GATSBY_DEV_SSR || false },
   siteMetadata: {
-    siteTitle: 'Pixel Point Gatsby Starter',
+    siteTitle: 'Pixel Point Gatsby Tailwind Starter',
     siteDescription: 'Site Description',
     siteImage: '/images/social-preview.jpg',
     siteLanguage: 'en',
