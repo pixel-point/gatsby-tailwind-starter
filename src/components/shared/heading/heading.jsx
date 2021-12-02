@@ -24,11 +24,7 @@ const Heading = ({
   children,
   ...otherProps
 }) => {
-  const className = clsx(
-    styles.base && styles.size[size],
-    styles.theme[theme],
-    additionalClassName
-  );
+  const className = clsx(styles.base, styles.size[size], styles.theme[theme], additionalClassName);
 
   if (asHTML) {
     return (

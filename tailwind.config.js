@@ -5,6 +5,9 @@ module.exports = {
   mode: 'jit',
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false,
+  corePlugins: {
+    container: false,
+  },
   theme: {
     screens: {
       // TODO: Uncomment and change the value of 2xl breakpoint if it's needed, otherwise just delete it

@@ -1,6 +1,6 @@
-@tailwind components;
+@tailwind base;
 
-@layer components {
+@layer base {
   .safe-paddings {
     @apply px-safe;
 

@@ -19,7 +19,7 @@ const styles = {
 
 const Link = ({ className: additionalClassName, size, theme, to, children, ...props }) => {
   const className = clsx(
-    theme && size && styles.base,
+    size && theme && styles.base,
     styles.size[size],
     styles.theme[theme],
     additionalClassName
