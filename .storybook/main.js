@@ -5,7 +5,7 @@ module.exports = {
   addons: ['@storybook/addon-essentials'],
   staticDirs: ['../static'],
   webpackFinal: async (config) => {
-    // Fix for framer-motion — https://github.com/framer/motion/issues/1307
+    // Fix for "framer-motion" — https://github.com/framer/motion/issues/1307
     config.module.rules.push({
       type: 'javascript/auto',
       test: /\.mjs$/,
@@ -19,7 +19,7 @@ module.exports = {
       require.resolve('babel-plugin-remove-graphql-queries')
     );
 
-    // Adding support for "src" folder resolve so imports like components/shared/button would work
+    // Support for "src" folder resolve so imports like "components/shared/button" would work
     config.resolve.modules = ['node_modules', path.resolve('src')];
 
     return config;

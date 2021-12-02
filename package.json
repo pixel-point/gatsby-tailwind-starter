@@ -8,7 +8,7 @@
     "develop": "gatsby develop -H 0.0.0.0",
     "storybook": "start-storybook -p 8001",
     "build": "gatsby build",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o public/storybook",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write .",
