@@ -1,5 +1,3 @@
-@tailwind components;
-
 @layer components {
   .grid-gap {
     @apply gap-x-10 2xl:gap-x-8 xl:gap-x-6 lg:gap-x-4;

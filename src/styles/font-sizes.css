@@ -1,5 +1,3 @@
-@tailwind base;
-
 /* TODO: Add all font sizes from Figma following this pattern: "fz-${size}" */
 @layer base {
   /* Your code goes here... */

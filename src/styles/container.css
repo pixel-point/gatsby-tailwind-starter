@@ -1,7 +1,5 @@
-@tailwind components;
-
+/* TODO: Add max-widths for each breakpoint + paddings for the resolution when the container fluid */
 @layer components {
-  /* TODO: Add max-widths for each breakpoint + paddings for the resolution when the container fluid */
   .container {
     @apply mx-auto;
   }

@@ -21,6 +21,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@storybook/react": "^6.4.4",
     "clsx": "^1.1.1",
     "framer-motion": "^5.3.3",
     "gatsby": "^4.3.0",
@@ -29,7 +30,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
-    "@storybook/react": "^6.4.4",
     "tailwindcss": "^2.2.19",
     "tailwindcss-safe-area": "^0.2.1"
   },
@@ -62,6 +62,8 @@
     "lint-staged": "^12.1.2",
     "markdownlint-cli": "^0.30.0",
     "postcss": "^8.4.4",
+    "postcss-hover-media-feature": "^1.0.1",
+    "postcss-import": "^14.0.2",
     "prettier": "^2.5.0"
   },
   "keywords": [

@@ -3,6 +3,7 @@ const path = require('path');
 module.exports = {
   stories: ['../src/components/shared/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: ['@storybook/addon-essentials'],
+  staticDirs: ['../static'],
   webpackFinal: async (config) => {
     // Fix for framer-motion — https://github.com/framer/motion/issues/1307
     config.module.rules.push({
