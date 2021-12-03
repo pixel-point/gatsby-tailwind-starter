@@ -121,14 +121,16 @@ component
 │  │  └── nested-component-lottie-data.json
 │  ├── images
 │  │  ├── nested-component-image.jpg
-│  │  └── nested-component-icon.svg
+│  │  ├── nested-component-inline-svg.inline.svg
+│  │  └── nested-component-url-svg.url.svg
 │  ├── nested-component.js
 │  └── index.js
 ├── data
 │  └── component-lottie-data.json
 ├── images
 │  ├── component-image.jpg
-│  └── component-icon.svg
+│  ├── component-inline-svg.inline.svg
+│  └── component-url-svg.url.svg
 ├── component.js
 └── index.js
 ```
