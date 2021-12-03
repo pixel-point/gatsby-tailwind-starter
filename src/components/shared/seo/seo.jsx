@@ -3,41 +3,68 @@ import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const SEO = ({ title, description }) => {
+const SEO = (props) => {
   const {
+    title,
+    metaDesc,
+    metaKeywords,
+    metaRobotsNoindex,
+    canonical,
+    opengraphTitle,
+    opengraphDescription,
+    opengraphImage,
+    opengraphUrl,
+  } = props;
+
+  const {
+    wp: {
+      generalSettings: { language: siteLanguage },
+    },
     site: {
-      siteMetadata: { siteTitle, siteDescription, siteUrl, siteImage, siteLanguage },
+      siteMetadata: { siteUrl, siteDescription, siteImage },
     },
   } = useStaticQuery(graphql`
-    query SEO {
+    query {
+      wp {
+        generalSettings {
+          language
+        }
+      }
       site {
         siteMetadata {
-          siteTitle
-          siteDescription
           siteUrl
+          siteDescription
           siteImage
-          siteLanguage
         }
       }
     }
   `);
 
+  const opengraphPreviewImage = opengraphImage
+    ? siteUrl + opengraphImage.localFile.childImageSharp.gatsbyImageData.images.fallback.src
+    : siteUrl + siteImage;
+
+  const isRobotsNoindexPage = metaRobotsNoindex === 'noindex';
+
   return (
     <Helmet
-      title={siteTitle || title}
+      title={title}
       htmlAttributes={{
         lang: siteLanguage,
         prefix: 'og: http://ogp.me/ns#',
       }}
     >
       {/* General */}
-      <meta name="description" content={siteDescription || description} />
+      <meta name="description" content={metaDesc} />
+      {metaKeywords && <meta name="keywords" content={metaKeywords} />}
+      {isRobotsNoindexPage && <meta name="robots" content="noindex" />}
+      {canonical.startsWith(siteUrl) && <link rel="canonical" href={canonical} />}
       {/* Open Graph */}
-      <meta property="og:title" content={siteTitle || title} />
-      <meta property="og:description" content={siteDescription || description} />
-      <meta property="og:url" content={siteUrl} />
-      <meta property="og:image" content={siteUrl + siteImage} />
+      <meta property="og:title" content={opengraphTitle || title} />
+      <meta property="og:description" content={opengraphDescription || siteDescription} />
+      <meta property="og:url" content={siteUrl + opengraphUrl} />
       <meta property="og:type" content="website" />
+      <meta property="og:image" content={opengraphPreviewImage} />
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
