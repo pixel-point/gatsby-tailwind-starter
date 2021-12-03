@@ -6,9 +6,7 @@
   "scripts": {
     "start": "npm run develop",
     "develop": "gatsby develop -H 0.0.0.0",
-    "storybook": "start-storybook -p 8001",
     "build": "gatsby build",
-    "build-storybook": "build-storybook -o public/storybook",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "format": "prettier --write .",
@@ -36,8 +34,6 @@
     "@babel/core": "^7.16.0",
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
-    "@storybook/addon-essentials": "^6.4.5",
-    "@storybook/react": "^6.4.5",
     "@svgr/webpack": "^6.1.0",
     "autoprefixer": "^10.4.0",
     "babel-loader": "^8.2.3",

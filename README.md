@@ -5,9 +5,7 @@
 - [Getting Started](#getting-started)
 - [Usage](#usage)
   - [Run the website](#run-the-website)
-  - [Run storybook](#run-storybook)
   - [Build the website](#build-the-website)
-  - [Build storybook](#build-storybook)
   - [Run the built website](#run-the-built-website)
   - [Clean Gatsby cache](#clean-gatsby-cache)
 - [Project Structure](#project-structure)
@@ -15,8 +13,6 @@
   - [ESLint](#eslint)
   - [Prettier](#prettier)
   - [VS Code](#vs-code)
-- [How-tos](#how-tos)
-  - [How to uninstall Storybook](#how-to-uninstall-storyook)
 
 ## Getting Started
 
@@ -46,22 +42,10 @@ cp .env.example .env
 npm run start
 ```
 
-### Run Storybook
-
-```bash
-npm run storybook
-```
-
 ### Build the website
 
 ```bash
 npm run build
-```
-
-### Build Storybook
-
-```bash
-npm run build-storybook
 ```
 
 ### Run the built website
@@ -187,27 +171,3 @@ You can navigate to settings.json by using Command Pallete (CMD+Shift+P) and the
 To enable Prettier go to Preferences -> Settings -> type "Format". Then check that you have esbenp.prettier-vscode as default formatter, and also enable "Format On Save".
 
 Reload VS Code and auto-format will work for you.
-
-## How-tos
-
-### How to uninstall Storybook
-
-1. Uninstall Storybook dependencies
-
-```bash
-npm uninstall @storybook/react @babel/core @storybook/addon-essentials @storybook/react babel-loader
-```
-
-2. Remove Storybook commands in `package.json`: "storybook" and "build-storybook:
-
-3. Delete all stories
-
-```bash
-rm src/components/shared/**/*.stories*
-```
-
-4. Delete `.storybook` folder
-
-```bash
-rm -rf .storybook
-```
