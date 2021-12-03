@@ -5,11 +5,11 @@ require('dotenv').config();
 module.exports = {
   flags: { DEV_SSR: process.env.GATSBY_DEV_SSR || false },
   siteMetadata: {
-    siteTitle: 'Pixel Point Gatsby Starter',
+    siteTitle: 'Pixel Point Gatsby Tailwind Starter',
     siteDescription: 'Site Description',
     siteImage: '/images/social-preview.jpg',
     siteLanguage: 'en',
-    siteUrl: process.env.GATSBY_DEFAULT_SITE_URL,
+    siteUrl: process.env.GATSBY_DEFAULT_SITE_URL || 'http://localhost:8000',
     authorName: 'Pixel Point',
   },
   plugins: [
@@ -51,8 +51,12 @@ module.exports = {
             svgoConfig: {
               plugins: [
                 {
-                  removeViewBox: false,
+                  name: 'preset-default',
+                  params: {
+                    overrides: [{ name: 'removeViewBox', active: false }],
+                  },
                 },
+                'prefixIds',
               ],
             },
           },
@@ -61,16 +65,22 @@ module.exports = {
           {
             test: /\.svg$/,
             svgoConfig: {
-              plugins: [
-                {
-                  removeViewBox: false,
-                },
-              ],
+              plugins: [{ name: 'removeViewBox', active: false }],
             },
           },
         ],
       },
     },
+    // TODO: Either uncomment this part of the code if the website is being hosted on Netlify or delete it
+    // {
+    //   resolve: 'gatsby-plugin-netlify',
+    //   // TODO: Either uncomment this part of the code if fonts are stored in /static/fonts/ or delete it
+    //   // options: {
+    //   //   headers: {
+    //   //     '/fonts/*': ['Cache-Control: public, max-age: 31536000, immutable'],
+    //   //   },
+    //   // },
+    // },
     'gatsby-alias-imports',
     'gatsby-plugin-postcss',
     'gatsby-plugin-sitemap',

@@ -1,9 +1,10 @@
 import clsx from 'clsx';
-import { Link as GatsbyLink } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-// Example of the code — https://user-images.githubusercontent.com/20713191/144221096-1939c382-4ab8-4d28-b0e6-7bbe3a8f8556.png
+import Link from 'components/shared/link';
+
+// Example of the code — https://user-images.githubusercontent.com/20713191/144215307-35538500-b9f0-486d-abed-1a14825bb75c.png
 const styles = {
   // TODO: Add base styles
   base: '',
@@ -17,42 +18,29 @@ const styles = {
   theme: {},
 };
 
-const Link = ({ className: additionalClassName, size, theme, to, children, ...props }) => {
-  const className = clsx(
-    size && theme && styles.base,
-    styles.size[size],
-    styles.theme[theme],
-    additionalClassName
-  );
+const Button = ({ className: additionalClassName, to, size, theme, children, ...otherProps }) => {
+  const className = clsx(styles.base, styles.size[size], styles.theme[theme], additionalClassName);
 
-  if (to.startsWith('/')) {
-    return (
-      <GatsbyLink className={className} to={to} {...props}>
-        {children}
-      </GatsbyLink>
-    );
-  }
+  const Tag = to ? Link : 'button';
 
   return (
-    <a className={className} href={to} {...props}>
+    <Tag className={className} to={to} {...otherProps}>
       {children}
-    </a>
+    </Tag>
   );
 };
 
-Link.propTypes = {
+Button.propTypes = {
   className: PropTypes.string,
   to: PropTypes.string,
-  size: PropTypes.oneOf(Object.keys(styles.size)),
-  theme: PropTypes.oneOf(Object.keys(styles.theme)),
+  size: PropTypes.oneOf(Object.keys(styles.size)).isRequired,
+  theme: PropTypes.oneOf(Object.keys(styles.theme)).isRequired,
   children: PropTypes.node.isRequired,
 };
 
-Link.defaultProps = {
+Button.defaultProps = {
   className: null,
   to: null,
-  size: null,
-  theme: null,
 };
 
-export default Link;
+export default Button;

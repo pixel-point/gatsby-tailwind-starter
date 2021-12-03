@@ -1,10 +1,8 @@
 import React from 'react';
 
-import Container from 'components/shared/container';
-
 const Footer = () => (
-  <footer>
-    <Container>Footer!</Container>
+  <footer className="safe-paddings">
+    <div className="container">Footer!</div>
   </footer>
 );
 

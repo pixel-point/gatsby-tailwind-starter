@@ -1,7 +1,7 @@
-@tailwind base;
-
+/* TODO: Add global styles: font-size, color, and other if needed */
 @layer base {
   body {
-    @apply antialiased;
+    @apply font-sans min-w-[320px] antialiased;
+    -webkit-tap-highlight-color: transparent;
   }
 }
