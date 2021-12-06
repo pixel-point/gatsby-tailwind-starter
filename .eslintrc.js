@@ -21,10 +21,12 @@ module.exports = {
     'no-restricted-exports': ['error', { restrictedNamedExports: ['then'] }],
     'no-unused-vars': 'error',
     'no-shadow': 'off',
+    'no-undef': 'error',
     'react/prop-types': 'error',
     'react/no-array-index-key': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/no-danger': 'off',
+    'react/forbid-prop-types': 'off',
     // Changes values from "function-expression" to "arrow-function", original rule setup — https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb/rules/react.js#L528
     'react/function-component-definition': [
       'error',
