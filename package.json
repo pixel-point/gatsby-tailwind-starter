@@ -62,7 +62,7 @@
     "postcss-hover-media-feature": "^1.0.1",
     "postcss-import": "^14.0.2",
     "prettier": "^2.5.0",
-    "slash": "^4.0.0"
+    "slash": "^3.0.0"
   },
   "keywords": [
     "react",

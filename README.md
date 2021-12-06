@@ -1,5 +1,7 @@
 # Pixel Point Gatsby Tailwind Starter
 
+## ⚠️ Once WordPress is set up, go through all TODOs with the comment "Uncomment once WordPress is set up" and complete them
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)

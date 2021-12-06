@@ -1,5 +1,7 @@
-/* eslint-disable react/prop-types */
-import { useStaticQuery, graphql } from 'gatsby';
+// TODO: Remove "no-undef" once WordPress is set up
+/* eslint-disable react/prop-types, no-undef */
+// TODO: Uncomment once WordPress is set up
+// import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
@@ -16,29 +18,30 @@ const SEO = (props) => {
     opengraphUrl,
   } = props;
 
-  const {
-    wp: {
-      generalSettings: { language: siteLanguage },
-    },
-    site: {
-      siteMetadata: { siteUrl, siteDescription, siteImage },
-    },
-  } = useStaticQuery(graphql`
-    query {
-      wp {
-        generalSettings {
-          language
-        }
-      }
-      site {
-        siteMetadata {
-          siteUrl
-          siteDescription
-          siteImage
-        }
-      }
-    }
-  `);
+  // TODO: Uncomment once WordPress is set up
+  // const {
+  //   wp: {
+  //     generalSettings: { language: siteLanguage },
+  //   },
+  //   site: {
+  //     siteMetadata: { siteUrl, siteDescription, siteImage },
+  //   },
+  // } = useStaticQuery(graphql`
+  //   query {
+  //     wp {
+  //       generalSettings {
+  //         language
+  //       }
+  //     }
+  //     site {
+  //       siteMetadata {
+  //         siteUrl
+  //         siteDescription
+  //         siteImage
+  //       }
+  //     }
+  //   }
+  // `);
 
   const opengraphPreviewImage = opengraphImage
     ? siteUrl + opengraphImage.localFile.childImageSharp.gatsbyImageData.images.fallback.src

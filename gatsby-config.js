@@ -71,30 +71,31 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-source-wordpress',
-      options: {
-        schema: {
-          timeout: 60000,
-        },
-        url: process.env.WP_GRAPHQL_URL,
-        auth: {
-          htaccess: {
-            username: process.env.WP_HTACCESS_USERNAME,
-            password: process.env.WP_HTACCESS_PASSWORD,
-          },
-        },
-        html: {
-          fallbackImageMaxWidth: 1920,
-          imageQuality: 85,
-        },
-        develop: {
-          nodeUpdateInterval: process.env.WP_NODE_UPDATE_INTERVAL || 5000,
-          hardCacheMediaFiles: process.env.WP_HARD_CACHE_MEDIA === 'true',
-          hardCacheData: process.env.WP_HARD_CACHE_DATA === 'true',
-        },
-      },
-    },
+    // TODO: Uncomment once WordPress is set up
+    // {
+    //   resolve: 'gatsby-source-wordpress',
+    //   options: {
+    //     schema: {
+    //       timeout: 60000,
+    //     },
+    //     url: process.env.WP_GRAPHQL_URL,
+    //     auth: {
+    //       htaccess: {
+    //         username: process.env.WP_HTACCESS_USERNAME,
+    //         password: process.env.WP_HTACCESS_PASSWORD,
+    //       },
+    //     },
+    //     html: {
+    //       fallbackImageMaxWidth: 1920,
+    //       imageQuality: 85,
+    //     },
+    //     develop: {
+    //       nodeUpdateInterval: process.env.WP_NODE_UPDATE_INTERVAL || 5000,
+    //       hardCacheMediaFiles: process.env.WP_HARD_CACHE_MEDIA === 'true',
+    //       hardCacheData: process.env.WP_HARD_CACHE_DATA === 'true',
+    //     },
+    //   },
+    // },
     // TODO: Either uncomment this part of the code if the website is being hosted on Netlify or delete it
     // {
     //   resolve: 'gatsby-plugin-netlify',

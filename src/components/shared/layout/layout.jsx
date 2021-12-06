@@ -1,4 +1,5 @@
-import { graphql } from 'gatsby';
+// TODO: Uncomment once WordPress is set up
+// import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
@@ -34,26 +35,27 @@ Layout.defaultProps = {
   seo: null,
 };
 
-export const query = graphql`
-  fragment wpPageSeo on WpPage {
-    seo {
-      title
-      metaDesc
-      metaKeywords
-      metaRobotsNoindex
-      canonical
-      opengraphTitle
-      opengraphDescription
-      opengraphImage {
-        localFile {
-          childImageSharp {
-            gatsbyImageData(layout: FIXED, height: 630, width: 1200, formats: JPG)
-          }
-        }
-      }
-      opengraphUrl
-    }
-  }
-`;
+// TODO: Uncomment once WordPress is set up
+// export const query = graphql`
+//   fragment wpPageSeo on WpPage {
+//     seo {
+//       title
+//       metaDesc
+//       metaKeywords
+//       metaRobotsNoindex
+//       canonical
+//       opengraphTitle
+//       opengraphDescription
+//       opengraphImage {
+//         localFile {
+//           childImageSharp {
+//             gatsbyImageData(layout: FIXED, height: 630, width: 1200, formats: JPG)
+//           }
+//         }
+//       }
+//       opengraphUrl
+//     }
+//   }
+// `;
 
 export default Layout;
