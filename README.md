@@ -5,8 +5,11 @@
 - [Getting Started](#getting-started)
 - [Usage](#usage)
   - [Run the website](#run-the-website)
+  - [Run storybook](#run-storybook)
   - [Build the website](#build-the-website)
+  - [Build storybook](#build-storybook)
   - [Run the built website](#run-the-built-website)
+  - [Run the built Storybook](#run-the-built-storybook)
   - [Clean Gatsby cache](#clean-gatsby-cache)
 - [Project Structure](#project-structure)
 - [Code Style](#code-style)
@@ -42,16 +45,34 @@ cp .env.example .env
 npm run start
 ```
 
+### Run Storybook
+
+```bash
+npm run storybook
+```
+
 ### Build the website
 
 ```bash
 npm run build
 ```
 
+### Build Storybook
+
+```bash
+npm run build:storybook
+```
+
 ### Run the built website
 
 ```bash
 npm run serve
+```
+
+### Run the built Storybook
+
+```bash
+npm run serve:storybook
 ```
 
 ### Clean Gatsby cache
