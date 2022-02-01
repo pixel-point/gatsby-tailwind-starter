@@ -9,7 +9,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "format": "prettier --write .",
+    "format": "prettier --write --ignore-path .gitignore .",
     "lint": "npm run lint:js & npm run lint:md",
     "lint:fix": "npm run lint:js:fix & npm run lint:md:fix",
     "lint:js": "eslint --ext .js,.jsx --ignore-path .gitignore .",
