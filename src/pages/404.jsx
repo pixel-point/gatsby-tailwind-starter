@@ -8,7 +8,7 @@ import Link from 'components/shared/link';
 //       No need to change anything else. Only colors and font sizes
 const NotFoundPage = () => (
   <Layout>
-    <section className="py-16 sm:py-32 safe-paddings">
+    <section className="safe-paddings py-16 sm:py-32">
       <div className="container">
         <p className="font-semibold uppercase">404 error</p>
         <Heading tag="h1">Page not found</Heading>
