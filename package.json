@@ -59,7 +59,8 @@
     "markdownlint-cli": "^0.30.0",
     "postcss": "^8.4.4",
     "postcss-import": "^14.0.2",
-    "prettier": "^2.5.0"
+    "prettier": "^2.5.0",
+    "prettier-plugin-tailwindcss": "^0.1.4"
   },
   "keywords": [
     "react",
