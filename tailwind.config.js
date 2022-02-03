@@ -7,7 +7,7 @@ const BREAKPOINTS = {
   lg: { min: '1280px', max: '1279px' },
   md: { min: '1024px', max: '1023px' },
   sm: { min: '768px', max: '767px' },
-  xs: { min: '360px', max: '360px' },
+  xs: { min: '360px', max: '359px' },
 };
 
 module.exports = {
