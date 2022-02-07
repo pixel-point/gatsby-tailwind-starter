@@ -53,19 +53,14 @@ module.exports = {
                 {
                   name: 'preset-default',
                   params: {
-                    overrides: [{ name: 'removeViewBox', active: false }],
+                    overrides: {
+                      removeViewBox: false,
+                    },
                   },
                 },
                 'prefixIds',
+                'removeDimensions',
               ],
-            },
-          },
-        ],
-        urlSvgOptions: [
-          {
-            test: /\.svg$/,
-            svgoConfig: {
-              plugins: [{ name: 'removeViewBox', active: false }],
             },
           },
         ],
