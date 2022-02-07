@@ -20,8 +20,8 @@
   },
   "dependencies": {
     "clsx": "^1.1.1",
-    "framer-motion": "^6.2.3",
-    "gatsby": "^4.6.0",
+    "framer-motion": "^6.2.4",
+    "gatsby": "^4.6.2",
     "gatsby-plugin-image": "^2.6.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
@@ -30,7 +30,7 @@
     "tailwindcss": "^3.0.18"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.12",
+    "@babel/core": "^7.17.0",
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
     "@svgr/webpack": "^6.2.1",
@@ -54,13 +54,13 @@
     "gatsby-source-filesystem": "^4.6.0",
     "gatsby-transformer-sharp": "^4.6.0",
     "husky": "^7.0.4",
-    "lint-staged": "^12.3.2",
-    "markdownlint-cli": "^0.30.0",
+    "lint-staged": "^12.3.3",
+    "markdownlint-cli": "^0.31.0",
     "postcss": "^8.4.6",
     "postcss-hover-media-feature": "^1.0.2",
     "postcss-import": "^14.0.2",
     "prettier": "^2.5.1",
-    "prettier-plugin-tailwindcss": "^0.1.4",
+    "prettier-plugin-tailwindcss": "^0.1.5",
     "tailwindcss-safe-area": "^0.2.2"
   },
   "keywords": [
