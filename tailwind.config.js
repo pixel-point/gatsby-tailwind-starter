@@ -1,15 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies, global-require */
 // const defaultTheme = require('tailwindcss/defaultTheme');
 
-const BREAKPOINTS = {
-  '2xl': { min: '1920px', max: '1919px' },
-  xl: { min: '1536px', max: '1535px' },
-  lg: { min: '1280px', max: '1279px' },
-  md: { min: '1024px', max: '1023px' },
-  sm: { min: '768px', max: '767px' },
-  xs: { min: '360px', max: '359px' },
-};
-
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   corePlugins: {
@@ -44,24 +35,12 @@ module.exports = {
       // },
     }),
     screens: {
-      '2xl': { max: BREAKPOINTS['2xl'].max },
-      xl: { max: BREAKPOINTS.xl.max },
-      lg: { max: BREAKPOINTS.lg.max },
-      md: { max: BREAKPOINTS.md.max },
-      sm: { max: BREAKPOINTS.sm.max },
-      xs: { max: BREAKPOINTS.xs.max },
-
-      'xl-up': { min: BREAKPOINTS.xl.min },
-      'lg-up': { min: BREAKPOINTS.lg.min },
-      'md-up': { min: BREAKPOINTS.md.min },
-      'sm-up': { min: BREAKPOINTS.sm.min },
-      'xs-up': { min: BREAKPOINTS.xs.min },
-
-      '2xl-only': { min: BREAKPOINTS.xl.min, max: BREAKPOINTS['2xl'].max },
-      'xl-only': { min: BREAKPOINTS.lg.min, max: BREAKPOINTS.xl.max },
-      'lg-only': { min: BREAKPOINTS.md.min, max: BREAKPOINTS.lg.max },
-      'md-only': { min: BREAKPOINTS.sm.min, max: BREAKPOINTS.md.max },
-      'sm-only': { min: BREAKPOINTS.xs.min, max: BREAKPOINTS.sm.max },
+      '2xl': { max: '1919px' },
+      xl: { max: '1535px' },
+      lg: { max: '1279px' },
+      md: { max: '1023px' },
+      sm: { max: '767px' },
+      xs: { max: '359px' },
     },
   },
   plugins: [require('tailwindcss-safe-area')],
