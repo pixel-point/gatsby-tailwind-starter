@@ -6,6 +6,13 @@
     "GraphQL.vscode-graphql",
     "bradlc.vscode-tailwindcss",
     "snipsnapdev.snipsnap-templates-vscode",
-    "csstools.postcss"
+    "csstools.postcss",
+    "bradlc.vscode-tailwindcss",
+    "SimonSiefke.svg-preview",
+    "mikestead.dotenv",
+    "esbenp.prettier-vscode",
+    "wayou.vscode-todo-highlight",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.auto-close-tag",
   ]
 }
