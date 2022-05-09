@@ -26,6 +26,10 @@ const SEO = ({ title, description, socialPreviewImage, canonicalUrl, slug }) => 
     throw new Error(`siteUrl should not have trailing slash. Current siteUrl: ${siteUrl}`);
   }
 
+  if (!slug) {
+    throw new Error(`slug is a required prop`);
+  }
+
   if (slug !== '/' && !/^\/.+\/$/.test(slug)) {
     throw new Error(`slug should have slashes at the beginning and end. Passed slug: ${slug}`);
   }

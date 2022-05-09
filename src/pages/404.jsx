@@ -6,7 +6,13 @@ import Link from 'components/shared/link';
 // TODO: Add colors and font sizes, check out the reference — https://tailwindui.com/components/marketing/feedback/404-pages#component-5792f8fd3c3c2be236e72c170345a0ce
 //       No need to change anything else. Only colors and font sizes
 const NotFoundPage = () => (
-  <Layout>
+  <Layout
+    seo={{
+      title: 'Page not found',
+      description: 'Sorry, we couldn’t find the page you’re looking for.',
+      slug: '/404/',
+    }}
+  >
     <section className="safe-paddings py-16 sm:py-32">
       <div className="container">
         <p className="font-semibold uppercase">404 error</p>
