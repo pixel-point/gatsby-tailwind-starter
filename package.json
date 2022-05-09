@@ -3,6 +3,10 @@
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
   "author": "Alex Barashkov <alex@pixelpoint.io>",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.6.0"
+  },
   "scripts": {
     "start": "npm run develop",
     "develop": "gatsby develop -H 0.0.0.0",
