@@ -73,7 +73,7 @@ module.exports = {
     //   // TODO: Either uncomment this part of the code if fonts are stored in /static/fonts/ or delete it
     //   // options: {
     //   //   headers: {
-    //   //     '/fonts/*': ['Cache-Control: public, max-age: 31536000, immutable'],
+    //   //     '/fonts/*': ['Cache-Control: public, max-age=31536000, immutable'],
     //   //   },
     //   // },
     // },
