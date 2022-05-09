@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-const SEO = ({ title, description, socialPreviewImage, canonicalUrl, slug }) => {
+const SEO = ({ title, description, socialPreviewImage, canonicalUrl, pathname }) => {
   const {
     site: {
       siteMetadata: { siteTitle, siteDescription, siteUrl, siteImage, siteLanguage },
@@ -26,15 +26,17 @@ const SEO = ({ title, description, socialPreviewImage, canonicalUrl, slug }) => 
     throw new Error(`siteUrl should not have trailing slash. Current siteUrl: ${siteUrl}`);
   }
 
-  if (!slug) {
-    throw new Error(`slug is a required prop`);
+  if (!pathname) {
+    throw new Error(`pathname is a required prop`);
   }
 
-  if (slug !== '/' && !/^\/.+\/$/.test(slug)) {
-    throw new Error(`slug should have slashes at the beginning and end. Passed slug: ${slug}`);
+  if (pathname !== '/' && !/^\/.+\/$/.test(pathname)) {
+    throw new Error(
+      `pathname should have slashes at the beginning and end. Passed pathname: ${pathname}`
+    );
   }
 
-  const currentUrl = slug !== '/' ? `${siteUrl}${slug}` : siteUrl;
+  const currentUrl = pathname !== '/' ? `${siteUrl}${pathname}` : siteUrl;
 
   return (
     <Helmet
@@ -65,7 +67,7 @@ SEO.propTypes = {
   description: PropTypes.string.isRequired,
   socialPreviewImage: PropTypes.string,
   canonicalUrl: PropTypes.string,
-  slug: PropTypes.string.isRequired,
+  pathname: PropTypes.string.isRequired,
 };
 
 SEO.defaultProps = {

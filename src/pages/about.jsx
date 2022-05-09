@@ -9,7 +9,7 @@ const AboutPage = ({ location: { pathname } }) => (
     seo={{
       title: 'About Us',
       description: 'About Us Description',
-      slug: pathname,
+      pathname,
     }}
   >
     <p>This is About Us page!</p>

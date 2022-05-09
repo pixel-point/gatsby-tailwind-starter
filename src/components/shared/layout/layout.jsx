@@ -30,7 +30,7 @@ Layout.propTypes = {
     description: PropTypes.string.isRequired,
     socialPreviewImage: PropTypes.string,
     canonicalUrl: PropTypes.string,
-    slug: PropTypes.string.isRequired,
+    pathname: PropTypes.string.isRequired,
   }).isRequired,
   children: PropTypes.node.isRequired,
 };

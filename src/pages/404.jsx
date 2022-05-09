@@ -10,7 +10,7 @@ const NotFoundPage = () => (
     seo={{
       title: 'Page not found',
       description: 'Sorry, we couldn’t find the page you’re looking for.',
-      slug: '/404/',
+      pathname: '/404/',
     }}
   >
     <section className="safe-paddings py-16 sm:py-32">

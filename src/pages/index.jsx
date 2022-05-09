@@ -9,7 +9,7 @@ const HomePage = ({ location: { pathname } }) => (
     seo={{
       title: 'Title',
       description: 'Description',
-      slug: pathname,
+      pathname,
     }}
   >
     <p>This is Home page!</p>
