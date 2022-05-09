@@ -22,6 +22,10 @@ const SEO = ({ title, description, socialPreviewImage, canonicalUrl, slug }) => 
     }
   `);
 
+  if (/\/$/.test(siteUrl)) {
+    throw new Error(`siteUrl should not have trailing slash. Current siteUrl: ${siteUrl}`);
+  }
+
   if (slug !== '/' && !/^\/.+\/$/.test(slug)) {
     throw new Error(`slug should have slashes at the beginning and end. Passed slug: ${slug}`);
   }
