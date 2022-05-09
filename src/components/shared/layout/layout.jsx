@@ -6,14 +6,14 @@ import Header from 'components/shared/header';
 import MobileMenu from 'components/shared/mobile-menu';
 import SEO from 'components/shared/seo';
 
-const Layout = ({ children }) => {
+const Layout = ({ seo, children }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleHeaderBurgerClick = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
     <>
-      <SEO />
+      <SEO {...seo} />
       <div className="flex min-h-screen flex-col">
         <Header isMobileMenuOpen={isMobileMenuOpen} onBurgerClick={handleHeaderBurgerClick} />
         <main className="flex-grow">{children}</main>
@@ -25,6 +25,13 @@ const Layout = ({ children }) => {
 };
 
 Layout.propTypes = {
+  seo: PropTypes.exact({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    socialPreviewImage: PropTypes.string,
+    canonicalUrl: PropTypes.string,
+    slug: PropTypes.string.isRequired,
+  }).isRequired,
   children: PropTypes.node.isRequired,
 };
 
