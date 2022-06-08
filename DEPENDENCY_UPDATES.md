@@ -94,12 +94,12 @@ Add information if you're having trouble updating any dependencies, this could b
 <details>
   <summary>Example</summary>
 
-### [gatsby-source-wordpress](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress)
+### packageName
 
-- **Issue found on:** 2 June, 2022
-- **Problematic version:** `6.15.1`
-- **Last stable version:** `6.7.0-alpha-gatsby-source-wordpress.7`
+- **Issue found on:** D Month, YYYY
+- **Problematic version:** x.x.x
+- **Last stable version:** x.x.x
 
-We've encountered some problems with images in some lazy blocks when upgrading, in some places they're missing in others they don't scale correctly, so at the time of the update we were using the stable version `6.7.0-alpha-gatsby-source-wordpress.7` of this plugin. We've not studied the problem in detail, but it seems that we need to update some logic in lazy blocks and image processing in them to safely upgrade to a newer version.
+Space for a free-form description of the problem
 
 </details>
