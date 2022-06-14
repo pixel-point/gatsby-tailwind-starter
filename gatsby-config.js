@@ -4,6 +4,7 @@ require('dotenv').config();
 
 module.exports = {
   flags: { DEV_SSR: process.env.GATSBY_DEV_SSR || false },
+  trailingSlash: 'always',
   siteMetadata: {
     siteTitle: 'Pixel Point Gatsby Tailwind Starter',
     siteDescription: 'Site Description',
@@ -79,5 +80,11 @@ module.exports = {
     'gatsby-alias-imports',
     'gatsby-plugin-postcss',
     'gatsby-plugin-sitemap',
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: process.env.GATSBY_DEFAULT_SITE_URL,
+      },
+    },
   ],
 };
