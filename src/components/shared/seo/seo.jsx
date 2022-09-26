@@ -1,12 +1,11 @@
 /* eslint-disable react/prop-types */
 import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 
-const SEO = ({ title, description }) => {
+const SEO = ({ title, description, pathname }) => {
   const {
     site: {
-      siteMetadata: { siteTitle, siteDescription, siteUrl, siteImage, siteLanguage },
+      siteMetadata: { siteTitle, siteDescription, siteUrl, siteImage },
     },
   } = useStaticQuery(graphql`
     query SEO {
@@ -16,31 +15,29 @@ const SEO = ({ title, description }) => {
           siteDescription
           siteUrl
           siteImage
-          siteLanguage
         }
       }
     }
   `);
 
+  const currentTitle = title || siteTitle;
+  const currentDescription = description || siteDescription;
+  const currentUrl = pathname !== '/' ? `${siteUrl}${pathname}` : siteUrl;
+
   return (
-    <Helmet
-      title={siteTitle || title}
-      htmlAttributes={{
-        lang: siteLanguage,
-        prefix: 'og: http://ogp.me/ns#',
-      }}
-    >
+    <>
+      <title key={currentTitle}>{currentTitle}</title>
       {/* General */}
-      <meta name="description" content={siteDescription || description} />
+      <meta name="description" content={currentDescription} />
       {/* Open Graph */}
-      <meta property="og:title" content={siteTitle || title} />
-      <meta property="og:description" content={siteDescription || description} />
-      <meta property="og:url" content={siteUrl} />
+      <meta property="og:title" content={currentTitle} />
+      <meta property="og:description" content={currentDescription} />
+      <meta property="og:url" content={currentUrl} />
       <meta property="og:image" content={siteUrl + siteImage} />
       <meta property="og:type" content="website" />
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-    </Helmet>
+    </>
   );
 };
 
