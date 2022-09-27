@@ -14,7 +14,6 @@ module.exports = {
     authorName: 'Pixel Point',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -67,15 +66,14 @@ module.exports = {
         ],
       },
     },
-    // TODO: Either uncomment this part of the code if the website is being hosted on Netlify and install "gatsby-plugin-netlify" or delete it
+    // TODO: Either uncomment this part of the code if the website is being hosted on Gatsby Cloud and install "gatsby-plugin-gatsby-cloud" or delete it
     // {
-    //   resolve: 'gatsby-plugin-netlify',
-    //   // TODO: Either uncomment this part of the code if fonts are stored in /static/fonts/ or delete it
-    //   // options: {
-    //   //   headers: {
-    //   //     '/fonts/*': ['Cache-Control: public, max-age: 31536000, immutable'],
-    //   //   },
-    //   // },
+    //   resolve: 'gatsby-plugin-gatsby-cloud',
+    //   options: {
+    //     headers: {
+    //       '/fonts/*': ['Cache-Control: public, max-age=31536000, immutable'],
+    //     },
+    //   },
     // },
     'gatsby-alias-imports',
     'gatsby-plugin-postcss',
