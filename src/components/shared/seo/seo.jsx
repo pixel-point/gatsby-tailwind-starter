@@ -20,6 +20,20 @@ const SEO = ({ title, description, pathname }) => {
     }
   `);
 
+  if (/\/$/.test(siteUrl)) {
+    throw new Error(`siteUrl should not have trailing slash. Current siteUrl: ${siteUrl}`);
+  }
+
+  if (!pathname) {
+    throw new Error(`pathname is a required prop`);
+  }
+
+  if (pathname !== '/' && !/^\/.+\/$/.test(pathname)) {
+    throw new Error(
+      `pathname should have slashes at the beginning and end. Passed pathname: ${pathname}`
+    );
+  }
+
   const currentTitle = title || siteTitle;
   const currentDescription = description || siteDescription;
   const currentUrl = pathname !== '/' ? `${siteUrl}${pathname}` : siteUrl;
